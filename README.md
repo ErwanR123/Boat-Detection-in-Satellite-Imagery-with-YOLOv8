@@ -19,9 +19,10 @@ The fine-tuned model achieves consistent detection of boats in the test images, 
 Qualitative examples are available at the end of the notebook.
 
 ## Repository Structure
-
+```
 ├── notebook.ipynb          # Complete training + prediction pipeline
 ├── predictions.csv         # Model output on the test set
 ├── boat_dataset_yolo/      # Generated YOLO-format dataset
 └── README.md
 
+```
