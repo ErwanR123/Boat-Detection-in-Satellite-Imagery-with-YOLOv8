@@ -1,28 +1,27 @@
 # Boat Detection in Satellite Imagery with YOLOv8
 
-This project builds an end-to-end pipeline for detecting boats in satellite imagery using a fine-tuned YOLOv8 model.  
-The dataset is provided as NumPy arrays and normalized bounding boxes; it is converted into the YOLO format, used to train a custom detector, and evaluated through both CSV predictions and visual inspection.
+This project implements a YOLOv8-based object detection pipeline to identify boats in satellite imagery.  
+The dataset is provided as NumPy arrays with normalized bounding boxes and is converted into the YOLO format before training.  
+A custom YOLOv8n model is then fine-tuned on this dataset and evaluated through both CSV predictions and qualitative visualizations.
 
-## Project Overview
+## Overview
 
-- Convert the raw training set into the YOLO directory structure  
-- Train/validation split and label export (`.txt` files)  
-- Fine-tune YOLOv8n on the custom boat dataset  
-- Generate predictions on the test set (`predictions.csv`)  
-- Visualize detections on unseen images  
+- Converted the raw dataset into the YOLO folder structure  
+- Exported normalized labels in standard YOLO format  
+- Fine-tuned a YOLOv8n model on the custom boat dataset  
+- Generated predictions for the test set (`predictions.csv`)  
+- Visualized detections on unseen test images  
 
-This notebook can serve as a clean reference for training YOLO models on custom datasets.
+This notebook can be used as a clear reference for training YOLO models on small custom datasets.
 
-## Results
+## Sample Predictions
 
-The fine-tuned model achieves consistent detection of boats in the test images, including small and high-contrast objects typical of satellite views.  
-Qualitative examples are available at the end of the notebook.
+Below are examples of the fine-tuned model detecting boats in satellite imagery:
 
-## Repository Structure
-```
-├── notebook.ipynb          # Complete training + prediction pipeline
-├── predictions.csv         # Model output on the test set
-├── boat_dataset_yolo/      # Generated YOLO-format dataset
-└── README.md
+### Example 1
+<img src="pred1.png" width="500"/>
 
-```
+### Example 2
+<img src="pred2.png" width="500"/>
+
+The model performs well across different scales and orientations, including small boats and cluttered backgrounds.
